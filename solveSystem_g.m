@@ -7,8 +7,8 @@ KRR = KG(vr,vr);
 FL = Fext(vl,1);
 FR = Fext(vr,1);
 
-ul = inv(KLL)*(FL-KLR*ur);
-R = KRR*ur + KRL*ul - FR
+ul = KLL\(FL-KLR*ur);
+R = KRR*ur + KRL*ul - FR;
 
 u(vl,1)=ul;
 u(vr,1)=ur;
